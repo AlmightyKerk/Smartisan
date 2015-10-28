@@ -1,0 +1,57 @@
+<ion-view view-title="Slide Game">
+  <ion-content>
+ 
+ <ion-slide-box style = "top:20px;"on-slide-changed="slideHasChangedEyes($index)" show-pager="false" does-continue="true" active-slide="myActiveSlide1" delegate-handle="eyes">
+  <ion-slide>       
+                     <img src="img\eyes2.png">     
+               </ion-slide>
+  <ion-slide>       
+                     <img src="img\eyes1.png">     
+               </ion-slide>
+  <ion-slide>
+    <ion-slide>       
+                     <img src="img\eyes.png">     
+               </ion-slide>
+  </ion-slide>
+</ion-slide-box>
+ <ion-slide-box style = "top:20px;" on-slide-changed="slideHasChangedNose($index)" show-pager="false" does-continue="true" active-slide="myActiveSlide2" delegate-handle="nose">
+    <ion-slide>       
+                     <img src="img\nose2.png">     
+               </ion-slide>
+  <ion-slide>       
+                     <img src="img\nose1.png">     
+               </ion-slide>
+  <ion-slide>       
+                     <img src="img\nose.png">     
+               </ion-slide>
+</ion-slide-box> 
+<ion-slide-box  style = "top:20px;"on-slide-changed="slideHasChangedMouth($index)" show-pager="false"does-continue="true" active-slide="myActiveSlide3" delegate-handle="mouth">
+  <ion-slide>       
+                     <img src="img\mouth2.png">     
+               </ion-slide>
+  <ion-slide>       
+                     <img src="img\mouth1.png">     
+               </ion-slide>
+  <ion-slide>       
+                     <img src="img\mouth.png">     
+               </ion-slide>
+</ion-slide-box>
+<br>
+<center><h2>{{name}}<h1>
+
+<button ng-show="!gameComplete"class="button button-full button-energized" ng-click = "verifyAnswer()">
+  This is my answer!
+</button>
+<button ng-show="gameComplete" class="button  button-full button-dark" ng-click="playAgain(myActiveSlide1,myActiveSlide2,myActiveSlide3)">
+   <b>Play Again!</b>
+  </button>
+
+<script id="image-modal.html" type="text/ng-template">
+              <div class="modal image-modal transparent" ng-click="closeModal()">
+                  <ion-pane class="transparent" style = "top:50px;">
+                     <center><img ng-src="{{imageSrc}}" height="200px" width="176"/>
+                  </ion-pane>
+              </div>
+          </script>
+  </ion-content>
+</ion-view>

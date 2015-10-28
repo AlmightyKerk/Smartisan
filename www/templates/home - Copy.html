@@ -1,0 +1,172 @@
+<!DOCTYPE HTML>
+<html>
+   <head>
+      <style>  
+      img{
+        max-width: 100%;
+        max-height: 100%;
+      }
+        html, body{
+          height: 100%;
+          width: 100%;
+        }     
+
+     
+        .slider-pager{
+            background-color:white;
+            opacity:0.4;
+            bottom: 0px;
+            height: 25px;
+        }
+      
+        .wrapper {
+          position: relative;
+          height:35%;
+        }
+
+        .col-33 
+        {
+          padding: 2px;
+        }
+
+       
+
+.wrapper p {
+
+  background-color: white;
+  bottom: 5%;
+  color: black;
+  font-family: Roboto;
+  font-size: 1.15em;
+  left: 0;
+  padding: 0.25em 0.75em;
+  position: absolute;
+  opacity:0.8;
+  width:100%;
+}
+
+.wrapper img {
+
+  height:140px;
+}
+
+
+       
+
+
+      </style>
+   </head>
+   <body>
+      <ion-view  view-title="Home">
+         <ion-content has-bouncing="false" scroll="false">
+         <div id="div_slider">
+            <ion-slide-box  pager-click = "pagerClick(index)" does-continue ="true"  auto-play = "true">
+               <ion-slide>       
+                     <img src="img\slide4.jpg">     
+               </ion-slide>
+               <ion-slide>       
+                     <img src="img\slide1.jpg">     
+               </ion-slide>
+               <ion-slide>
+                     <img src="img\slide2.jpg">
+               </ion-slide>
+               <ion-slide>
+                     <img src="img\slide3.jpg">        
+               </ion-slide>
+
+            </ion-slide-box>
+            <div class="row">
+               <div class="col col-33 ">
+                <div class="wrapper">
+                <a href = "#/app/shopping" style = "color:#867970;">
+                  <img src="img\user.jpg" />
+                  <center><p>User Profile</p>
+                </a>
+              </div>
+               </div>
+               <div class="col col-33"  >
+                <div class="wrapper">
+                <a href = "#/app/browse" style = "color:#867970;">
+                  <img class="full-image" src="img\myimages.png">
+                  <center>
+                  <p>   
+                  My Photos
+                  </p>
+                </a>
+                </div>
+               </div>
+               <div class="col col-33 ">
+                <div class="wrapper">
+                 <a href = "#/app/statistics" style = "color:#867970;">
+                  <img class="full-image" src="img\statistics.png">
+                  <center>
+                  <p>                
+                  Statistics
+                  </p>
+                  </a>
+                  </div>
+               </div>
+            </div>
+            <div class="row">
+               <div class="col col-33 ">
+                <div class="wrapper">
+                 <a href = "#/app/game" style = "color:#867970;">
+                  <img class="full-image" src="img\Quiz.jpg">
+                    <center>
+                  <p>
+                
+                  Quiz
+                  </p>
+                  </a>
+                  </div>
+               </div>
+               <div class="col col-33 ">
+                <div class="wrapper">
+                 <a href = "#/app/flipcard" style = "color:#867970;">
+                  <img class="full-image" src="img\cardgame.png">
+                   <center>
+                  <p>
+                 
+                  Match Card
+                  </p>
+                  </a> 
+                  </div>
+               </div>
+               <div class="col col-33" >
+                <div class="wrapper">
+                 <a href = "#/app/slidegame" style = "color:#867970;">
+                  <img class="full-image" src="img\imageslide.jpg">
+                    <center>
+                  <p>
+                
+                  Slide it
+                  </p>
+                  </a>
+                </div>
+               </div>
+            </div>
+          </div>
+         <div class="circle">
+          <i class="icon ion-ios-americanfootball" style="position:relative;top:50px;left:60px; font-size: 100px;color:white;"></i>  
+       </div>
+        <div class="circle">
+          <i class="icon ion-ios-home" style="position:relative;top:50px;left:60px; font-size: 100px;color:white;"></i>  
+       </div>
+       <div class="circle">
+          <i class="icon ion-images" style="position:relative;top:50px;left:60px; font-size: 100px;color:white;"></i>  
+       </div>
+        <div class="circle">
+          <i class="icon ion-stats-bars" style="position:relative;top:50px;left:60px; font-size: 100px;color:white;"></i>  
+       </div>
+        <div class="circle">
+          <i class="icon ion-ios-basketball" style="position:relative;top:50px;left:60px; font-size: 100px;color:white;"></i>  
+       </div>
+        <div class="circle">
+          <i class="icon ion-ios-americanfootball" style="position:relative;top:50px;left:60px; font-size: 100px;color:white;"></i>  
+       </div>
+         </ion-content>
+
+
+
+   </body>
+</html>

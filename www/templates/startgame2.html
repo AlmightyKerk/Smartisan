@@ -1,0 +1,30 @@
+<ion-view view-title="Game">
+<ion-nav-view animation="slide-right"></ion-nav-view>
+  <ion-content>
+  <div class="list card">
+
+
+
+  <div class="item item-body">
+    <img  class="full-image" src="{{imgSrc}}" height = "350px" >
+  </div>
+
+  <div class="row">
+  <div class="col col-50"><button class="button  button-block button-energized" ng-click="checkAnswer(1)">
+   {{option[0]}}
+  </button></div>
+  <div class="col col-50"><button class="button  button-block button-energized" ng-click="checkAnswer(2)">
+    {{option[1]}}
+  </button></div>
+</div>
+ <div class="row">
+  <div class="col col-50"><button class="button  button-block button-energized" ng-click="checkAnswer(3)">
+     {{option[2]}}
+  </button></div>
+  <div class="col col-50"><button class="button  button-block button-energized" ng-click="checkAnswer(4)">
+     {{option[3]}}
+  </button></div>
+</div>
+</div>
+  </ion-content>
+</ion-view>

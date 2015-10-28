@@ -1,0 +1,122 @@
+<ion-view view-title="Flipping game">
+  <ion-content>
+    <!--[if lt IE 7]>
+        <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+<div class="row">
+    <flippy
+    id = "1"
+    ng-class="myClass1"
+    ng-click="flipTest(1); "
+    flip-duration="800"
+    timing-function="ease-in-out" height="100px" width="100px">
+
+        <flippy-front>
+        <img src="img/backcard.png"  />
+         
+        </flippy-front>
+
+        <flippy-back>        	
+           	  <img src={{image.src}}  />
+        </flippy-back>
+
+    </flippy>
+    <flippy
+    id = "2"
+    ng-class="myClass2"
+    ng-click="flipTest(2);" 
+    flip-duration="800"
+    timing-function="ease-in-out" height="100px" width="100px">
+
+        <flippy-front>
+        <img src="img/backcard.png"  />
+        
+        </flippy-front>
+
+        <flippy-back>
+            <h2> {{relation}}</h2>
+        </flippy-back>
+
+    </flippy>
+</div>
+<div class="row">
+    <flippy
+    id = "3"
+    ng-class="myClass3"
+    ng-click="flipTest(3)"
+    flip-duration="800"
+    timing-function="ease-in-out" height="100px" width="100px">
+
+        <flippy-front>
+        <img src="img/backcard.png"  />
+           
+        </flippy-front>
+
+        <flippy-back>
+           	
+           	 <img src={{image2.src}}  />
+        </flippy-back>
+
+    </flippy>
+    <flippy
+    id = "4"
+    ng-class="myClass4"
+    ng-click="flipTest(4)"
+    flip-duration="800"
+    timing-function="ease-in-out" height="100px" width="100px">
+
+        <flippy-front>
+        <img src="img/backcard.png"  />
+         
+        </flippy-front>
+
+        <flippy-back>
+           	
+           	  <h2> {{relation2}}</h2>
+        </flippy-back>
+
+    </flippy>
+</div>
+<div class="row">
+    <flippy
+    id = "5"
+    ng-class="myClass5"
+    ng-click="flipTest(5)"
+    flip-duration="800"
+    timing-function="ease-in-out" height="100px" width="100px">
+
+        <flippy-front>
+        <img src="img/backcard.png"  />
+           
+        </flippy-front>
+
+        <flippy-back>
+           	
+           	 <img src={{image3.src}}  />
+        </flippy-back>
+
+    </flippy>
+    <flippy
+    id = "6"
+    ng-class="myClass6"
+    ng-click="flipTest(6)"
+    flip-duration="800"
+    timing-function="ease-in-out" height="100px" width="100px">
+
+        <flippy-front>
+        <img src="img/backcard.png"  />
+       
+        </flippy-front>
+
+        <flippy-back>
+           	
+           	    <h2> {{relation3}}</h2>
+        </flippy-back>
+
+    </flippy>
+</div>
+    
+
+    
+     </ion-content>
+</ion-view>

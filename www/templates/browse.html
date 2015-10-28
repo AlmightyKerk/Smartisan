@@ -1,0 +1,66 @@
+<ion-view  class = "quizBg" view-title="Game Setting">
+  <ion-content  lazy-scroll>
+  <div >
+    <button class="button button-block button-energized" ng-click="addImage()">
+   Add image
+  </button>
+ 
+  
+<div  ng-repeat="image in images" >
+
+  <!--<div >
+   
+    <h2>{{image.name}}</h2>
+    <p>{{image.relation}}</p>
+  </div>
+
+  <div class="item item-body">
+    <img  ng-src="{{urlForImage(image.src,images)}}"  height="200px">
+ 
+  </div>
+
+  <div class="item tabs tabs-secondary tabs-icon-left">
+    <a class="tab-item" ng-href="#/app/editimage/{{image.id}}">
+      <i class="icon ion-edit"></i>
+      Edit
+    </a>
+    <a class="tab-item" ng-click = "deleteImage(image.src,images)">
+      <i class="icon ion-trash-a"></i>
+      Delete
+    </a>
+    
+  </div>-->
+  
+      <div class="item item-thumbnail-left item-icon-right " style="background-color:rgba(255,255,255,0.5 );" >
+        <img ng-src="{{urlForImage(image.src,images)}}" ng-click="showImage(image.src)"  image-lazy-loader="lines">
+
+        <h2>{{image.name}}</h2>
+        <p>{{image.relation}}</p>
+        
+            <a ng-href="#/app/editimage/{{image.id}}"  style = "color: #000000;">
+              <i style="right:70px; " class="icon ion-edit"></i>
+      
+            </a>
+             <a ng-click="deleteImage(image,images)"  style = "color: #000000;">
+              <i  class="icon ion-trash-a"></i>
+      
+            </a>
+          
+         
+          
+      </div>
+
+
+</div>
+
+
+ </div>
+  <script id="image-modal.html" type="text/ng-template">
+              <div class="modal image-modal transparent" ng-click="closeModal()">
+                  <ion-pane class="transparent" style = "top:30px;">
+                     <center><img ng-src="{{imageSrc}}" style = "height:500px;"/>
+                  </ion-pane>
+              </div>
+          </script>
+  </ion-content>
+</ion-view>

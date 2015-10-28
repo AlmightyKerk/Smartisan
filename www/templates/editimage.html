@@ -1,0 +1,20 @@
+<ion-view view-title="Edit Image Data">
+  <ion-content>
+    <div class="list">
+        <label class="item item-input item-left ">
+         
+         <b>Name : </b><input type="text"   ng-model = "name"   > </input>		 
+        </label>   
+           <label class="item item-input ">
+			
+		<b>Relation : </b><input type="text"  ng-model = "relation" ></input>		
+		</label>
+       
+        <label class="item">
+          <button class="button button-block button-positive" type="submit" ng-click="saveData(name,relation)">
+          	Save
+          </button>
+        </label>
+      </div>
+  </ion-content>
+</ion-view>

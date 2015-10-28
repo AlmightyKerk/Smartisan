@@ -1,0 +1,59 @@
+<ion-view view-title="Statistics">
+   <ion-tabs class="tabs-stable tabs-icon-only">
+   <ion-tab title="Line Graph" icon-off="ion-arrow-graph-up-right" >
+      <ion-content  style = "top:85px;" class = "scroll-content ionic-scroll" has-bouncing=true;  >
+         <!-- Tab 1 content -->
+         <div class="card" >
+            <div class="item item-divider menulogin"> <center>Performance Line Graph</div>
+            <div class="item item-text-wrap">
+               <canvas id="line" class="chart chart-line" data="data" labels="labels" legend="true" series="series" options="{showTooltips: false}"></canvas>
+            </div>
+         </div>
+         <img ng-src="img/linechart.jpg" alt="Description"  style = "opacity: 0.5;  float: right;"/>
+
+      </ion-content>
+   </ion-tab>
+   <ion-tab title="chart"  icon-off="ion-stats-bars">
+      <ion-content  style = "top:85px;" class = "scroll-content ionic-scroll" has-bouncing=true;  >
+         <!-- Tab 1 content --> 
+         <div class="card" >
+            <div class="item item-divider menulogin"> <center>Doughnut Chart for all the Games</div>
+            <div class="item item-text-wrap">
+              <canvas id="doughnut" class="chart chart-doughnut" chart-legend="true"
+  chart-data="ddata" chart-labels="dlabels">
+</canvas> 
+            </div>
+         </div>
+             <img ng-src="img/piechart.jpg" alt="Description"  style = "opacity: 0.5; "/>
+
+                </ion-content>
+   </ion-tab>
+   <ion-tab title="Stats" icon-off="ion-android-clipboard " >
+      <!-- Tab 2 content -->
+      <ion-content class = "detailsBg"   style = "top:85px;"  has-bouncing="false" scroll="false" >
+     
+         <td-cards  >
+            <td-card id="td-card" ng-repeat="card in cards" on-destroy="cardDestroyed($index)"
+               on-swipe-left="cardSwipedLeft($index)" on-swipe-right="cardSwipedRight($index)"
+               on-partial-swipe="cardPartialSwipe(amt)">
+               <div class="item item-divider menulogin">
+                  <div class="title">
+                     <center>
+                     <b> {{card.title}}</b>
+                  </div>
+               </div>
+               <center>
+               <img  style = "height:150px;"ng-src="{{card.image}}"> 
+               <div class="description">
+                  <h2 ng-show="{{card.type}}"> {{card.name}} </h2>
+                  <h3 ng-hide="{{card.type}}">
+                  Total number of plays: {{card.totalPlays}} </h2>
+                  <h3 ng-hide="{{card.type}}">
+                  Percentage Score: {{card.percentage}}% </h2>
+               </div>
+            </td-card>
+         </td-cards>
+     
+      </ion-content>
+   </ion-tab>
+</ion-view>

@@ -1,0 +1,33 @@
+<ion-view view-title="Game Complete"  class = "quizBg">
+
+  <ion-content>
+
+ 
+
+
+  <div class="card">
+  <div class="item item-divider menulogin">
+ 
+ <center><h2 style = "color:white"><b><u>Report Card for Quiz!</u></b></h2>
+  </div>
+  <div class="item item-text-wrap">
+	 <center>Number of tries:<p style="font-size:30px;">{{totalTries}}</p><br>
+  	<center>Number of Mistake:<p style="font-size:30px;">{{mistake}}</p><br>
+  	<center>Your Score:<p style="font-size:30px;">{{score}}</p>
+  		<img ng-show="pass" ng-src="{{tickSrc}}" style = "height:150px"/>
+  		<img ng-show="!pass" ng-src="{{failSrc}}" style = "height:150px;"/>
+  </div>
+ 
+</div>
+
+
+
+
+
+
+    <button class="button  button-block button-energized" ng-click="playGame()">
+   Play again
+  </button><br><br>
+ 
+  </ion-content>
+</ion-view>
